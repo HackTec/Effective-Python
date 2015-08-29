@@ -1,38 +1,7 @@
 {
-    "title": null,
-    "description": null,
-    "github": null,
-    "githubHost": "https://github.com/",
-    "plugins": [],
+    "author": "https://github.com/bslatkin",
+    "description": "这是 Effective Python 的中文版本",
+    "generator": "site",
     "plugins" : [ "disqus", "google_code_prettify", "collapsible-menu", "maxiang", "livereload"],
-    "pluginsConfig": {
-        "fontSettings": {
-            "theme": "sepia", "night" or "white",
-            "family": "serif" or "sans",
-            "size": 1 to 4
-        }
-    },
-    "links": {
-        "sidebar": {
-        },
-        "sharing": {
-            "google": null,
-            "facebook": null,
-            "twitter": null,
-            "weibo": null,
-            "all": null
-        }
-    },
-    "pdf": {
-        "toc": true,
-        "pageNumbers": false,
-        "fontSize": 12,
-        "paperSize": "a4",
-        "margin": {
-            "right": 62,
-            "left": 62,
-            "top": 36,
-            "bottom": 36
-        }
-    }
+    "title": "Effective Python"
 }
