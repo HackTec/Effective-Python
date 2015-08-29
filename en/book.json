@@ -2,6 +2,6 @@
     "author": "https://github.com/bslatkin",
     "description": "The GitBook Version Effective Python",
     "generator": "site",
-    "plugins" : [ "disqus", "google_code_prettify", "collapsible-menu", "maxiang", "livereload"],
+    "plugins" : ["livereload"],
     "title": "Effective Python"
 }
