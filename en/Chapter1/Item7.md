@@ -48,7 +48,8 @@ print(chile_len_set)
 
 >>>
 
-{1: ‘ghost’, 2: ‘habanero’, 3: ‘cayenne’} {8, 5, 7}
+{1: ‘ghost’, 2: ‘habanero’, 3: ‘cayenne’} 
+{8, 5, 7}
 ```
 
 ##Things to Remember
