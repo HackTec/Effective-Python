@@ -4,10 +4,8 @@ Python’s pithy syntax makes it easy to write single-line expressions that impl
 
 ```python
 from urllib.parse import parse_qs
-
 my_values = parse_qs(‘red=5&blue=0&green=’, keep_blank_values=True)
 print(repr(my_values))
-
 
 >>>
 
@@ -17,15 +15,16 @@ print(repr(my_values))
 Some query string parameters may have multiple values, some may have single values, some may be present but have blank values, and some may be missing entirely. Using the get method on the result dictionary will return different values in each circumstance.
 
 ```
-print(‘Red:     ', my_values.get(‘red’)) print(‘Green:   ’, my_values.get(‘green’))
+print(‘Red:     ', my_values.get(‘red’)) 
+print(‘Green:   ’, my_values.get(‘green’))
 print(‘Opacity: ‘, my_values.get(‘opacity’))
 
 
 >>>
 
-Red:	    [‘5’] 
-Green:	    [”] 
-Opacity:	 None
+Red:	     [‘5’] 
+Green:	   [”] 
+Opacity:   None
 ```
 
 It’d be nice if a default value of 0 was assigned when a parameter isn’t supplied or is blank. You might choose to do this with Boolean expressions because it feels like this logic doesn’t merit a whole if statement or helper function quite yet.
@@ -34,17 +33,16 @@ Python’s syntax makes this choice all too easy. The trick here is that the emp
 
 ```python
 # For query string ‘red=5&blue=0&green=’ 
-red = my_values.get(‘red’, [”])[0] or 0 green = my_values.get(‘green’, [”])[0] or 0
+red = my_values.get(‘red’, [”])[0] or 0 
+green = my_values.get(‘green’, [”])[0] or 0
 opacity = my_values.get(‘opacity’, [”])[0] or 0
-
 print(‘Red:     %r’ % red) 
 print(‘Green:   %r’ % green)
 print(‘Opacity: %r’ % opacity)
 
-
 >>>
 
-Red:	 ‘5’
+Red:	  ‘5’
 Green:	 0 
 Opacity: 0
 ```
@@ -76,18 +74,21 @@ This is better. For less complicated situations, if/else conditional expressions
 ```python
 green = my_values.get(‘green’, [”]) 
 if green[0]:
-green = int(green[0]) else:
-green = 0
+    green = int(green[0]) 
+else:
+    green = 0
 ```
 
 Writing a helper function is the way to go, especially if you need to use this logic repeatedly.
 
 ```python
-def get_first_int(values, key, default=0): found = values.get(key, [”])
+def get_first_int(values, key, default=0): 
+found = values.get(key, [”])
 if found[0]:
-
-found = int(found[0]) else:
-found = default return found
+    found = int(found[0]) 
+else:
+    found = default
+return found
 ```
 
 The calling code is much clearer than the complex expression using or and the two-line version using the if/else expression.
