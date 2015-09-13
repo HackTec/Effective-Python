@@ -3,7 +3,9 @@
 Beyond basic usage (see Item 7: “Use List Comprehensions Instead of map and filter”), list comprehensions also support multiple levels of looping. For example, say you want to simplify a matrix (a list containing other lists) into one flat list of all cells. Here, I do this with a list comprehension by including two for expressions. These expressions run in the order provided from left to right.
 
 ```python
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] flat = [x for row in matrix for x in row] print(flat)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] 
+flat = [x for row in matrix for x in row] 
+print(flat)
 
 >>>
 
@@ -31,17 +33,18 @@ my_lists = [
 	# …
 ]
 
-flat = [x for sublist1 in my_lists for sublist2 in sublist1 for x in sublist2]
+flat = [x for sublist1 in my_lists 
+        for sublist2 in sublist1 
+        for x in sublist2]
 ```
 
 At this point, the multiline comprehension isn’t much shorter than the alternative. Here, I produce the same result using normal loop statements. The indentation of this version makes the looping clearer than the list comprehension.
 
 ```python
 flat = []
-
 for sublist1 in my_lists:
-
-for sublist2 in sublist1: flat.extend(sublist2)
+    for sublist2 in sublist1: 
+        flat.extend(sublist2)
 ```
 
 List comprehensions also support multiple if conditions. Multiple conditions at the same loop level are an implicit and expression. For example, say you want to filter a list of numbers to only even values greater than four. These two list comprehensions are equivalent.
@@ -55,8 +58,10 @@ c = [x for x in a if x > 4 and x % 2 == 0]
 Conditions can be specified at each level of looping after the for expression. For example, say you want to filter a matrix so the only cells remaining are those divisible by 3 in rows that sum to 10 or higher. Expressing this with list comprehensions is short, but extremely difficult to read.
 
 ```python
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] filtered = [[x for x in row if x % 3 == 0]
-for row in matrix if sum(row) >= 10] print(filtered)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] 
+filtered = [[x for x in row if x % 3 == 0]
+ 	     for row in matrix if sum(row) >= 10] 
+print(filtered)
 
 >>>
 
