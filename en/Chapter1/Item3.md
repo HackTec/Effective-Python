@@ -23,7 +23,7 @@ def to_str(bytes_or_str):
     if isinstance(bytes_or_str, bytes): 			
         value = bytes_or_str.decode(‘utf-8’)
     else:
-	value = bytes_or_str
+        value = bytes_or_str
     return value	# Instance of str
 ```
 
@@ -32,9 +32,9 @@ You’ll need another method that takes a str or bytes and always returns a byte
 ```python
 def to_bytes(bytes_or_str):
     if isinstance(bytes_or_str, str):
-	value = bytes_or_str.encode(‘utf-8’)
+        value = bytes_or_str.encode(‘utf-8’)
     else:
-	value = bytes_or_str
+        value = bytes_or_str
     return value	# Instance of bytes
 ```
 
@@ -45,9 +45,9 @@ In Python 2, you’ll need one method that takes a str or unicode and always ret
 
 def to_unicode(unicode_or_str):
     if isinstance(unicode_or_str, str):
-	value = unicode_or_str.decode(‘utf-8’) 
+        value = unicode_or_str.decode(‘utf-8’) 
     else:
-	value = unicode_or_str
+        value = unicode_or_str
     return value	# Instance of unicode
 ```
 
@@ -59,7 +59,7 @@ def to_str(unicode_or_str):
     if isinstance(unicode_or_str, unicode): 		
         value = unicode_or_str.encode(‘utf-8’)
     else:
-	value = unicode_or_str 
+        value = unicode_or_str 
     return value	# Instance of str
 ```
 
