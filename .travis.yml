@@ -18,6 +18,6 @@ install:
 
 script:
   - gitbook build
-  - gitbook pdf ./
+  - gitbook pdf
   - gitbook epub ./
   - gitbook mobi ./
