@@ -51,11 +51,11 @@ Here, ::2 means select every second item starting at the beginning. Trickier, ::
 
 What do you think 2::2 means? What about -2::-2 vs. -2:2:-2 vs. 2:2:-2?
 
-```python
-a[2::2]   # [‘c’, ‘e’, ‘g’]
-a[-2::-2]  # [‘g’, ‘e’, ‘c’, ‘a’] 
+```python 
+a[2::2]     # [‘c’, ‘e’, ‘g’]
+a[-2::-2]   # [‘g’, ‘e’, ‘c’, ‘a’] 
 a[-2:2:-2]  # [‘g’, ‘e’]
-a[2:2:-2] # []
+a[2:2:-2]   # []
 ```
 
 
@@ -65,7 +65,7 @@ The point is that the stride part of the slicing syntax can be extremely confusi
 To prevent problems, avoid using stride along with start and end indexes. If you must use a stride, prefer making it a positive value and omit start and end indexes. If you must use stride with start or end indexes, consider using one assignment to stride and another to slice.
 
 ```python
-b = a[::2]  # [‘a’, ‘c’, ‘e’, ‘g’] 
+b = a[::2]   # [‘a’, ‘c’, ‘e’, ‘g’] 
 c = b[1:-1]  # [‘c’, ‘e’]
 ```
  
