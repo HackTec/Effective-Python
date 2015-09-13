@@ -1,15 +1,17 @@
 ##Item 6: Avoid Using start, end, and stride in a Single Slice
 
-In addition to basic slicing (see Item 5: “Know How to Slice Sequences”), Python has special syntax for the stride of a slice in the form somelist[start:end:stride]. This lets you take every nth item when slicing a sequence. For example, the stride makes it easy to group by even and odd indexes in a list.
+In addition to basic slicing (see Item 5: “Know How to Slice Sequences”), Python has special syntax for the stride of a slice in the form somelist`[start:end:stride]`. This lets you take every nth item when slicing a sequence. For example, the stride makes it easy to group by even and odd indexes in a list.
 
 ```python
-a = [‘red’, ‘orange’, ‘yellow’, ‘green’, ‘blue’, ‘purple’] odds = a[::2]
+a = [‘red’, ‘orange’, ‘yellow’, ‘green’, ‘blue’, ‘purple’] 
+odds = a[::2]
 evens = a[1::2] print(odds)
 print(evens)
 
 >>>
 
-[‘red’, ‘yellow’, ‘blue’] [‘orange’, ‘green’, ‘purple’]
+[‘red’, ‘yellow’, ‘blue’] 
+[‘orange’, ‘green’, ‘purple’]
 ```
 
 The problem is that the stride syntax often causes unexpected behavior that can introduce bugs. For example, a common Python trick for reversing a byte string is to slice the string with a stride of -1.
@@ -19,7 +21,8 @@ x = b’mongoose’
 y = x[::-1] 
 print(y)
 
->>> b’esoognom’
+>>> 
+b’esoognom’
 ```
 
 That works well for byte strings and ASCII characters, but it will break for Unicode characters encoded as UTF-8 byte strings.
@@ -29,7 +32,7 @@ w = ‘谢谢’
 x = w.encode(‘utf-8’) 
 y = x[::-1]
 z = y.decode(‘utf-8’)
-```
+
 
 >>>
 
@@ -40,7 +43,7 @@ Are negative strides besides -1 useful? Consider the following examples.
 
 ```python
 a = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’]
-a[::2] # [‘a’, ‘c’, ‘e’, ‘g’] 
+a[::2]  # [‘a’, ‘c’, ‘e’, ‘g’] 
 a[::-2] # [‘h’, ‘f’, ‘d’, ‘b’]
 ```
 
@@ -48,11 +51,11 @@ Here, ::2 means select every second item starting at the beginning. Trickier, ::
 
 What do you think 2::2 means? What about -2::-2 vs. -2:2:-2 vs. 2:2:-2?
 
-```python
-a[2::2]   # [‘c’, ‘e’, ‘g’]
-a[-2::-2]  # [‘g’, ‘e’, ‘c’, ‘a’] 
+```python 
+a[2::2]     # [‘c’, ‘e’, ‘g’]
+a[-2::-2]   # [‘g’, ‘e’, ‘c’, ‘a’] 
 a[-2:2:-2]  # [‘g’, ‘e’]
-a[2:2:-2] # []
+a[2:2:-2]   # []
 ```
 
 
@@ -62,7 +65,7 @@ The point is that the stride part of the slicing syntax can be extremely confusi
 To prevent problems, avoid using stride along with start and end indexes. If you must use a stride, prefer making it a positive value and omit start and end indexes. If you must use stride with start or end indexes, consider using one assignment to stride and another to slice.
 
 ```python
-b = a[::2]  # [‘a’, ‘c’, ‘e’, ‘g’] 
+b = a[::2]   # [‘a’, ‘c’, ‘e’, ‘g’] 
 c = b[1:-1]  # [‘c’, ‘e’]
 ```
  
