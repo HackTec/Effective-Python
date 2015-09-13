@@ -8,7 +8,6 @@ flat = [x for row in matrix for x in row]
 print(flat)
 
 >>>
-
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
@@ -20,7 +19,6 @@ squared = [[x**2 for x in row] for row in matrix]
 print(squared)
 
 >>>
-
 [[1, 4, 9], [16, 25, 36], [49, 64, 81]]
 ```
 
@@ -28,7 +26,6 @@ If this expression included another loop, the list comprehension would get so lo
 
 ```python
 my_lists = [
-
 	[[1, 2, 3], [4, 5, 6]], 
 	# …
 ]
