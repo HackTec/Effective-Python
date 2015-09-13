@@ -4,6 +4,7 @@ Python’s pithy syntax makes it easy to write single-line expressions that impl
 
 ```python
 from urllib.parse import parse_qs
+
 my_values = parse_qs(‘red=5&blue=0&green=’, keep_blank_values=True)
 print(repr(my_values))
 
@@ -33,9 +34,11 @@ Python’s syntax makes this choice all too easy. The trick here is that the emp
 
 ```python
 # For query string ‘red=5&blue=0&green=’ 
+
 red = my_values.get(‘red’, [”])[0] or 0 
 green = my_values.get(‘green’, [”])[0] or 0
 opacity = my_values.get(‘opacity’, [”])[0] or 0
+
 print(‘Red:     %r’ % red) 
 print(‘Green:   %r’ % green)
 print(‘Opacity: %r’ % opacity)
