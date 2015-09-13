@@ -1,11 +1,13 @@
 ##Item 5: Know How to Slice Sequences
 
-Python includes syntax for slicing sequences into pieces. Slicing lets you access a subset of a sequence’s items with minimal effort. The simplest uses for slicing are the built-in types list, str, and bytes. Slicing can be extended to any Python class that implements the `\__getitem\__` and `\__setitem\__` special methods (see Item 28: “Inherit from collections.abc for Custom Container Types”).
+Python includes syntax for slicing sequences into pieces. Slicing lets you access a subset of a sequence’s items with minimal effort. The simplest uses for slicing are the built-in types list, str, and bytes. Slicing can be extended to any Python class that implements the `__getitem__` and `__setitem__` special methods (see Item 28: “Inherit from collections.abc for Custom Container Types”).
 
 The basic form of the slicing syntax is somelist[start:end], where start is inclusive and end is exclusive.
 
 ```python
-a = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’] print(‘First four:’, a[:4])
+a = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’] 
+
+print(‘First four:’, a[:4])
 print(‘Last four: ‘, a[-4:]) 
 print(‘Middle two:’, a[3:-3])
 
@@ -32,10 +34,10 @@ Using negative numbers for slicing is helpful for doing offsets relative to the 
 All of these forms of slicing would be clear to a new reader of your code. There are no surprises, and I encourage you to use these variations.
 
 ```python
-a[:]	 # [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’] 
-a[:5]	 # [‘a’, ‘b’, ‘c’, ‘d’, ‘e’]
+a[:]	   # [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’] 
+a[:5]	   # [‘a’, ‘b’, ‘c’, ‘d’, ‘e’]
 a[:-1]	 # [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’]
-a[4:]	 #  [‘e’, ‘f’, ‘g’, ‘h’]
+a[4:]	   #  [‘e’, ‘f’, ‘g’, ‘h’]
 a[-3:]	 #   [‘f’, ‘g’, ‘h’]
 a[2:5]	 #   [‘c’, ‘d’, ‘e’]
 a[2:-1]	 #   [‘c’, ‘d’, ‘e’, ‘f’, ‘g’] 
@@ -90,6 +92,7 @@ print(‘After	’, a)
 >>>
 Before	[‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’] 
 After	[‘a’, ‘b’, 99, 22, 14, ‘h’]
+```
 
 If you leave out both the start and the end indexes when slicing, you’ll end up with a copy of the original list.
 
