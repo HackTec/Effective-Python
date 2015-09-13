@@ -6,7 +6,7 @@
 
 * [About the Author](Preface/About_the_Author.md)
 
-* Chapter 1: Pythonic Thinking
+* [Chapter 1: Pythonic Thinking](Chapter1/Chapter1.md)
 
 	- Item 1: Know Which Version of Python You’re Using 
 	- Item 2: Follow the PEP8 Style Guide
