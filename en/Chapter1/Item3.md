@@ -20,20 +20,22 @@ In Python 3, you’ll need one method that takes a str or bytes and always retur
 
 ```python
 def to_str(bytes_or_str):
-	if isinstance(bytes_or_str, bytes): 			value = bytes_or_str.decode(‘utf-8’)
-	else:
-		value = bytes_or_str
-	return value	# Instance of str
+    if isinstance(bytes_or_str, bytes): 			
+        value = bytes_or_str.decode(‘utf-8’)
+    else:
+	value = bytes_or_str
+    return value	# Instance of str
 ```
 
 You’ll need another method that takes a str or bytes and always returns a bytes.
 
 ```python
 def to_bytes(bytes_or_str):
-	if isinstance(bytes_or_str, str):
-		value = bytes_or_str.encode(‘utf-8’) 	else:
-		value = bytes_or_str
-	return value	# Instance of bytes
+    if isinstance(bytes_or_str, str):
+	value = bytes_or_str.encode(‘utf-8’)
+    else:
+	value = bytes_or_str
+    return value	# Instance of bytes
 ```
 
 In Python 2, you’ll need one method that takes a str or unicode and always returns a unicode.
@@ -42,24 +44,23 @@ In Python 2, you’ll need one method that takes a str or unicode and always ret
 # Python 2
 
 def to_unicode(unicode_or_str):
-	if isinstance(unicode_or_str, str):
-		value = unicode_or_str.decode(‘utf-8’) 
-	else:
-		value = unicode_or_str
-	return value	# Instance of unicode
+    if isinstance(unicode_or_str, str):
+	value = unicode_or_str.decode(‘utf-8’) 
+    else:
+	value = unicode_or_str
+    return value	# Instance of unicode
 ```
 
 You’ll need another method that takes str or unicode and always returns a str.
 
 ```python
 # Python 2
-
 def to_str(unicode_or_str):
-
-	if isinstance(unicode_or_str, unicode): 		value = unicode_or_str.encode(‘utf-8’)
-	else:
-		value = unicode_or_str 
-	return value	# Instance of str
+    if isinstance(unicode_or_str, unicode): 		
+        value = unicode_or_str.encode(‘utf-8’)
+    else:
+	value = unicode_or_str 
+    return value	# Instance of str
 ```
 
 There are two big gotchas when dealing with raw 8-bit values and Unicode characters in Python.
@@ -80,7 +81,8 @@ The second issue is that in Python 3, operations involving file handles (returne
 For example, say you want to write some random binary data to a file. In Python 2, this works. In Python 3, this breaks.
 
 ```python
-with open(‘/tmp/random.bin’, ‘w’) as f: 		f.write(os.urandom(10))
+with open(‘/tmp/random.bin’, ‘w’) as f: 		
+    f.write(os.urandom(10))
 
 >>>
 
@@ -93,7 +95,8 @@ To make this work properly, you must indicate that the data is being opened in w
 
 
 ```python
-with open(‘/tmp/random.bin’, ‘wb’) as f: 		f.write(os.urandom(10))
+with open(‘/tmp/random.bin’, ‘wb’) as f:
+    f.write(os.urandom(10))
 ```
 
 This problem also exists for reading data from files. The solution is the same: Indicate binary mode by using 'rb' instead of 'r' when opening a file.
