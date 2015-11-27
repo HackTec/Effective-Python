@@ -28,7 +28,7 @@ Python 3通常可以使用名字`python3`来获取
 
 `Python 3`在持续的获取新的特性以及改进，而这些并不会被加到`Python 2`中。在写这本书的时候，大多常见的Python开源库已经兼容了`Python 3`。我强烈建议你用`Python 3`作为你的下一个Python项目。
 
-##重点提要
+##请记住
 
 * 有两种主要的Python版本被经常的使用：`Python 2`和`Python 3`。
 * 有很多流行的Python的运行环境：CPython,Jython,IronPython,PyPy。
