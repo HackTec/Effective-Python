@@ -38,10 +38,10 @@
 	- Item 22: Prefer Helper Classes Over Bookkeeping with Dictionaries and Tuples		
     - Item 23: Accept Functions for Simple Interfaces Instead of Classes
 	- Item 24: Use @classmethod Polymorphism to Construct Objects Generically
-	- [Item 25: Initialize Parent Classes with super](Chapter3/Item25.md)
-	- [Item 26: Use Multiple Inheritance Only for Mix-in Utility Classes](Chapter3/Item26.md)
-	- [Item 27: Prefer Public Attributes Over Private Ones](Chapter3/Item27.md)
-	- [Item 28: Inherit from collections.abc for Custom Container Types](Chapter3/Item28.md)
+	- [Item 25: Initialize Parent Classes with super](Chapter3/item25.md)
+	- [Item 26: Use Multiple Inheritance Only for Mix-in Utility Classes](Chapter3/item26.md)
+	- [Item 27: Prefer Public Attributes Over Private Ones](Chapter3/item27.md)
+	- [Item 28: Inherit from collections.abc for Custom Container Types](Chapter3/item28.md)
 	
 * Chapter 4: Metaclasses and Attributes
 
