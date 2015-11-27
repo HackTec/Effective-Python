@@ -52,7 +52,7 @@
 	- Item 34: Register Class Existence with Metaclasses
 	- Item 35: Annotate Class Attributes with Metaclasses 
 	
-* Chapter 5: Concurrency and Parallelism
+* [Chapter 5: Concurrency and Parallelism](Chapter5/Chapter5.md)
 	
 	- Item 36: Use subprocess to Manage Child Processes
 	- Item 37: Use Threads for Blocking I/O, Avoid for Parallelism 
