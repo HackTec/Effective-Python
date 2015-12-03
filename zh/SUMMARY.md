@@ -1,7 +1,6 @@
 ##内容
 
 * [第一章: Pythonic思想](Chapter1/Chapter1.md)
-
 	- [第一条: 知道你正在使用哪个版本的Python](Chapter1/Item1.md) 
 	- [第二条: 遵循PEP8风格指南](Chapter1/Item2.md)
 	- [第三条: 知道bytes, str, 和 unicode之间的区别](Chapter1/Item3.md) 
