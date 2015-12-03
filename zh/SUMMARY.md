@@ -10,5 +10,5 @@
 	- [第七条: 使用列表推导取代map和filter](Chapter1/Item7.md) 
 	- [第八条: 在列表推导中避免两个以上的表达式](Chapter1/Item8.md) 
 
-* [Chapter 5: Concurrency and Parallelism](Chapter5/Chapter5.md)
+* [第五章：并发性与平行计算](Chapter5/Chapter5.md)
 
