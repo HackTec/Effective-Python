@@ -62,7 +62,7 @@
 	- Item 40: Consider Coroutines to Run Many Functions Concurrently 
 	- Item 41: Consider concurrent.futures for True Parallelism
 	
-* Chapter 6: Built-in Modules
+* [Chapter 6: Built-in Modules](Chapter6/Chapter6.md)
 
 	- [Item 42: Define Function Decorators with functools.wraps](Chapter6/item42.md)
 	- [Item 43: Consider contextlib and with Statements for Reusable try/finally Behavior](Chapter6/item43.md)
