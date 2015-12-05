@@ -64,8 +64,8 @@
 	
 * Chapter 6: Built-in Modules
 
-	- [Item 42: Define Function Decorators with functools.wraps](Chapter6/Item42.md)
-	- [Item 43: Consider contextlib and with Statements for Reusable try/finally Behavior](Chapter6/Item43.md)
+	- [Item 42: Define Function Decorators with functools.wraps](Chapter6/item42.md)
+	- [Item 43: Consider contextlib and with Statements for Reusable try/finally Behavior](Chapter6/item43.md)
 	- Item 44: Make pickle Reliable with copyreg
 	- Item 45: Use datetime Instead of time for Local Clocks 
 	- Item 46: Use Built-in Algorithms and Data Structures
